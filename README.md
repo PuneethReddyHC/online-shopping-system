@@ -10,7 +10,7 @@ online shopping system is a [DBMS project] with both admin and user layouts.
 
 2>Open XAMPP Control panal and start [apache] and [mysql] .
 
-3>Download project from github(https://github.com/PuneethReddyHC/online-shopping-system-advanced.git).
+3>Download project from github(https://github.com/PuneethReddyHC/online-shopping-with-advanced-admin-page.git).
 
 4>extract files in C:\\xampp\htdocs\.
 
@@ -18,11 +18,11 @@ online shopping system is a [DBMS project] with both admin and user layouts.
 
 6>click on import
 
-7>select file [online-shopping-system-advanced/database/onlineshop.sql].
+7>select file [online-shopping-with-advanced-admin-page/database/onlineshop.sql].
 
 8>edit file in folder online-shopping-system-advanced/db.php.
 
-9>open any browser and type http://localhost/online-shopping-system-advanced-master.
+9>open any browser and type http://localhost/online-shopping-with-advanced-admin-page.
 
 10>first register and then login
 
