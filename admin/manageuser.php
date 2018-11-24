@@ -23,11 +23,11 @@ include "topheader.php";
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
-                  <table class="table tablesorter " id="">
+                  <table class="table tablesorter table-hover" id="">
                     <thead class=" text-primary">
                       <tr><th>User Name</th>
                 <th>User Password</th>
-	<th><a href="adduser.php" class="btn btn-primary">Add New</a></th>
+	<th><a href="adduser.php" class="btn btn-success">Add New</a></th>
                     </tr></thead>
                     <tbody>
                       <?php 
@@ -39,8 +39,12 @@ include "topheader.php";
                         echo "<tr><td>$user_name</td><td>$user_password</td>";
 
                         echo"<td>
-                        <a href='edituser.php?user_id=$user_id' class=' btn btn-success'>Edit</a>
-                        <a href='manageuser.php?user_id=$user_id&action=delete' class='btn btn-danger'>Delete</a>
+                        <a href='edituser.php?user_id=$user_id' type='button' rel='tooltip' title='' class='btn btn-info btn-link btn-sm' data-original-title='Edit User'>
+                                <i class='material-icons'>edit</i>
+                              <div class='ripple-container'></div></a>
+                        <a href='manageuser.php?user_id=$user_id&action=delete' type='button' rel='tooltip' title='' class='btn btn-danger btn-link btn-sm' data-original-title='Delete User'>
+                                <i class='material-icons'>close</i>
+                              <div class='ripple-container'></div></a>
                         </td></tr>";
                         }
                         mysqli_close($con);

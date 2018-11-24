@@ -79,7 +79,7 @@ mysqli_close($con);
                       </div>
                       <div class="col-md-4">
                         <div class="form-group bmd-form-group">
-                          <label class="bmd-label-floating">Country</label>
+                          <label class="bmd-label-floating">Address</label>
                           <input type="text" name="country" id="country" class="form-control" required>
                         </div>
                       </div>

@@ -25,7 +25,7 @@ include "topheader.php";
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
-                  <table class="table tablesorter " id="">
+                  <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
                         <tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>Password</th><th>Contact</th><th>Address</th><th>City</th>
                     </tr></thead>
@@ -54,17 +54,22 @@ include "topheader.php";
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
-                  <table class="table tablesorter " id="">
+                  <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                        <tr><th>ID</th><th>Categories</th>
+                        <tr><th>ID</th><th>Categories</th><th>Count</th>
                     </tr></thead>
                     <tbody>
                       <?php 
                         $result=mysqli_query($con,"select * from categories")or die ("query 1 incorrect.....");
-
+                        $i=1;
                         while(list($cat_id,$cat_title)=mysqli_fetch_array($result))
                         {	
-                        echo "<tr><td>$cat_id</td><td>$cat_title</td>
+                            $sql = "SELECT COUNT(*) AS count_items FROM products WHERE product_cat=$i";
+                            $query = mysqli_query($con,$sql);
+                            $row = mysqli_fetch_array($query);
+                            $count=$row["count_items"];
+                            $i++;
+                        echo "<tr><td>$cat_id</td><td>$cat_title</td><td>$count</td>
 
                         </tr>";
                         }
@@ -82,17 +87,23 @@ include "topheader.php";
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
-                  <table class="table tablesorter " id="">
+                  <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                        <tr><th>ID</th><th>Brands</th>
+                        <tr><th>ID</th><th>Brands</th><th>Count</th>
                     </tr></thead>
                     <tbody>
                       <?php 
                         $result=mysqli_query($con,"select * from brands")or die ("query 1 incorrect.....");
-
+                        $i=1;
                         while(list($brand_id,$brand_title)=mysqli_fetch_array($result))
                         {	
-                        echo "<tr><td>$brand_id</td><td>$brand_title</td>
+                            
+                            $sql = "SELECT COUNT(*) AS count_items FROM products WHERE product_brand=$i";
+                            $query = mysqli_query($con,$sql);
+                            $row = mysqli_fetch_array($query);
+                            $count=$row["count_items"];
+                            $i++;
+                        echo "<tr><td>$brand_id</td><td>$brand_title</td><td>$count</td>
 
                         </tr>";
                         }
@@ -111,7 +122,7 @@ include "topheader.php";
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
-                  <table class="table tablesorter " id="">
+                  <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
                         <tr><th>ID</th><th>email</th>
                     </tr></thead>

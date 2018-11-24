@@ -4272,13 +4272,13 @@ table.tablesorter thead tr .headerSortDown {
 
 .fixed-plugin {
   position: fixed;
-  right: 0;
+  right: 30px;
   width: 64px;
   background: rgba(0, 0, 0, 0.3);
   z-index: 1031;
   border-radius: 8px 0 0 8px;
   text-align: center;
-  top: 120px;
+  top: 10px;
 }
 
 .fixed-plugin li>a,

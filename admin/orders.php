@@ -38,7 +38,7 @@ include "topheader.php";
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
-                  <table class="table tablesorter " id="">
+                  <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
                       <tr><th>Customer Name</th><th>Products</th><th>Contact | Email</th><th>Address</th><th>Details</th><th>Shipping</th><th>Time</th>
                     </tr></thead>

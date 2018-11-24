@@ -59,7 +59,7 @@ include "topheader.php";
               </div>
               <div class="card-body">
                 <div class="table-responsive ps">
-                  <table class="table tablesorter " id="page1">
+                  <table class="table table-hover tablesorter " id="page1">
                     <thead class=" text-primary">
                       <tr><th>Image</th><th>Name</th><th>Price</th><th>
 	<a class=" btn btn-primary" href="addproduct.php">Add New</a></th></tr></thead>
