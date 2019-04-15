@@ -40,6 +40,8 @@ online shopping system is a [DBMS project] with both admin and user layouts.
 ## visit my other repository with different admin pages with below link
 https://github.com/PuneethReddyHC/online-shopping-system-advanced
 
+https://github.com/PuneethReddyHC/event-management
+
 ##  If you like my project hit a star button
 
 
