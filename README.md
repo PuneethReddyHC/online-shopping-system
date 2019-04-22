@@ -59,7 +59,7 @@ https://github.com/PuneethReddyHC/event-management
 ![Image of adduser](https://github.com/PuneethReddyHC/online-shopping-with-advanced-admin-page/blob/master/screenshot/mainpage.png)
 ![Image of adduser](https://github.com/PuneethReddyHC/online-shopping-with-advanced-admin-page/blob/master/screenshot/productpage.png)
 ![Image of adduser](https://github.com/PuneethReddyHC/online-shopping-with-advanced-admin-page/blob/master/screenshot/productzoom.png)
-![Image of adduser](https://github.com/PuneethReddyHC/online-shopping-with-advanced-admin-page/blob/master/screenshot/register modal.png)
+![Image of adduser](https://github.com/PuneethReddyHC/online-shopping-with-advanced-admin-page/blob/master/screenshot/registermodal.png)
 ![Image of adduser](https://github.com/PuneethReddyHC/online-shopping-with-advanced-admin-page/blob/master/screenshot/searchfilter.png)
 ![Image of adduser](https://github.com/PuneethReddyHC/online-shopping-with-advanced-admin-page/blob/master/screenshot/searchpage.png)
 ![Image of adduser](https://github.com/PuneethReddyHC/online-shopping-with-advanced-admin-page/blob/master/screenshot/store.png)
