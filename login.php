@@ -7,16 +7,35 @@ session_start();
 #If user given credential matches successfully with the data available in database then we will echo string login_success
 #login_success string will go back to called Anonymous funtion $("#login").click() 
 
+
 if(isset($_POST["email"]) && isset($_POST["password"])){
-	$email = mysqli_real_escape_string($con,$_POST["email"]);
+	$email = $_POST["email"]);
 	$password = $_POST["password"];
-	$sql = "SELECT * FROM user_info WHERE email = '$email' AND password = '$password'";
-	$run_query = mysqli_query($con,$sql);
-	$count = mysqli_num_rows($run_query);
-    $row = mysqli_fetch_array($run_query);
-		$_SESSION["uid"] = $row["user_id"];
-		$_SESSION["name"] = $row["first_name"];
-		$ip_add = getenv("REMOTE_ADDR");
+	$sql = "SELECT * FROM user_info WHERE email = ?";
+	$stmt = mysqli_stmt_init($con);
+	if(!mysqli_stmt_prepare($stmt,$sql)){
+		exit( "Sorry, Somthing went wrong");
+	}
+	else{
+		 mysqli_stmt_bind_param($stmt, "s", $email); 
+		 mysqli_stmt_execute($stmt);
+		 $result= mysqli_stmt_get_result($stmt);
+		if($row=mysqli_fetch_assoc($result)){
+			$check=password_verify($password, $row['password']);
+			if($check==false){
+			    header("Location: ../index.php?Error=...");
+				exit();
+			} else if (check==true){
+				$_SESSION["uid"] = $row["user_id"];
+				$_SESSION["name"] = $row["first_name"];
+				$ip_add = getenv("REMOTE_ADDR");
+				$count=1;
+			}
+	
+		}
+	
+	
+	
 		//we have created a cookie in login_form.php page so if that cookie is available means user is not login
         
 	//if user record is available in database then $count will be equal to 1
