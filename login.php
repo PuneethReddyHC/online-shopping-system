@@ -62,7 +62,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 				} 
 				
 			
-            exit;
+            exit();
 
 		}else{
                 $email = mysqli_real_escape_string($con,$_POST["email"]);
