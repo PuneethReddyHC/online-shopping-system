@@ -53,7 +53,7 @@
                     <li class="nav-item ">
                         <a class="nav-link" href="addsuppliers.php">
                             <i class="material-icons">person</i>
-                            <p>Add supliers</p>
+                            <p>Add users</p>
                         </a>
                         
                     </li>
@@ -73,7 +73,7 @@
                      <li class="nav-item ">
                         <a class="nav-link" href="manageuser.php">
                             <i class="material-icons">person</i>
-                            <p>Manage supliers</p>
+                            <p>Manage users</p>
                         </a>
                     </li>
                     <li class="nav-item ">

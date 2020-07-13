@@ -27,7 +27,7 @@ mysqli_close($con);
           <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Add Suppliers</h4>
+                  <h4 class="card-title">Add User</h4>
                   <p class="card-category">profile</p>
                 </div>
                 <div class="card-body">
