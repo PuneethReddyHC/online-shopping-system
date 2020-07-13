@@ -58,7 +58,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 					
 					</script>";
 				} else {
-					header('Location: index.php'); // default page
+					echo "<script> location.href='index.php'; </script>" ;// default page
 				} 
 				
 			
@@ -83,7 +83,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
                     //if user is login from page we will send login_success
                     echo "login_success";
 
-                    echo "<script> location.href='admin/addproduct.php'; </script>";
+                    echo "<script> location.href='admin/add_products.php'; </script>";
                     exit;
 
                 }else{
