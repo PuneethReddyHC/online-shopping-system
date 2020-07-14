@@ -37,7 +37,7 @@ online shopping system is a [DBMS project] with both admin and user layouts.
 
 12. first register and then login
 
-13. admin login details  Email=admin@gmail.com and Password=123456789.
+13. admin login details  Email=admin@gmail.com or username = admin and Password=123456789.
 
 ## If you like my project 
 Bye me Cup of coffee
