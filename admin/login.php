@@ -36,7 +36,7 @@
                             <div class="alert alert-danger"><h4 id="e_msg"><?php include('./server/errors.php'); ?></h4></div>
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="admin_username" id="your_name" placeholder="Admin Username"/>
+                                <input type="text" name="admin_username" id="your_name" placeholder="Admin Email"/>
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
