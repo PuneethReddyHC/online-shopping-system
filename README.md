@@ -11,8 +11,6 @@
 # online-shopping-with-advanced-admin-page
 Updated version
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gLwfj67GI8A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 online shopping system is a [DBMS project] with both admin and user layouts.
 
 # Installation
