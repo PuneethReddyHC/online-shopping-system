@@ -3,10 +3,10 @@ $(document).ready(function(){
     cathome();
 	brand();
 	product();
-    
+
     producthome();
-    
-    
+
+
 	//cat() is a funtion fetching category record from database whenever page is load
 	function cat(){
 		$.ajax({
@@ -15,7 +15,7 @@ $(document).ready(function(){
 			data	:	{category:1},
 			success	:	function(data){
 				$("#get_category").html(data);
-				
+
 			}
 		})
 	}
@@ -26,7 +26,7 @@ $(document).ready(function(){
 			data	:	{categoryhome:1},
 			success	:	function(data){
 				$("#get_category_home").html(data);
-				
+
 			}
 		})
 	}
@@ -73,16 +73,16 @@ $(document).ready(function(){
 			}
 		})
 	}
-   
-    
-	/*	when page is load successfully then there is a list of categories when user click on category we will get category id and 
+
+
+	/*	when page is load successfully then there is a list of categories when user click on category we will get category id and
 		according to id we will show products
 	*/
 	$("body").delegate(".category","click",function(event){
 		$("#get_product").html("<h3>Loading...</h3>");
 		event.preventDefault();
 		var cid = $(this).attr('cid');
-		
+
 			$.ajax({
 			url		:	"action.php",
 			method	:	"POST",
@@ -94,13 +94,13 @@ $(document).ready(function(){
 				}
 			}
 		})
-	
+
 	})
     $("body").delegate(".categoryhome","click",function(event){
 		$("#get_product").html("<h3>Loading...</h3>");
 		event.preventDefault();
 		var cid = $(this).attr('cid');
-		
+
 			$.ajax({
 			url		:	"homeaction.php",
 			method	:	"POST",
@@ -112,17 +112,17 @@ $(document).ready(function(){
 				}
 			}
 		})
-	
+
 	})
 
-	/*	when page is load successfully then there is a list of brands when user click on brand we will get brand id and 
+	/*	when page is load successfully then there is a list of brands when user click on brand we will get brand id and
 		according to brand id we will show products
 	*/
 	$("body").delegate(".selectBrand","click",function(event){
 		event.preventDefault();
 		$("#get_product").html("<h3>Loading...</h3>");
 		var bid = $(this).attr('bid');
-		
+
 			$.ajax({
 			url		:	"action.php",
 			method	:	"POST",
@@ -134,12 +134,12 @@ $(document).ready(function(){
 				}
 			}
 		})
-	
+
 	})
 	/*
-		At the top of page there is a search box with search button when user put name of product then we will take the user 
-		given string and with the help of sql query we will match user given string to our database keywords column then matched product 
-		we will show 
+		At the top of page there is a search box with search button when user put name of product then we will take the user
+		given string and with the help of sql query we will match user given string to our database keywords column then matched product
+		we will show
 	*/
 	$("#search_btn").click(function(){
 		$("#get_product").html("<h3>Loading...</h3>");
@@ -149,7 +149,7 @@ $(document).ready(function(){
 			url		:	"action.php",
 			method	:	"POST",
 			data	:	{search:1,keyword:keyword},
-			success	:	function(data){ 
+			success	:	function(data){
 				$("#get_product").html(data);
 				if($("body").width() < 480){
 					$("body").scrollTop(683);
@@ -164,7 +164,7 @@ $(document).ready(function(){
 	/*
 		Here #login is login form id and this form is available in index.php page
 		from here input data is sent to login.php page
-		if you get login_success string from login.php page means user is logged in successfully and window.location is 
+		if you get login_success string from login.php page means user is logged in successfully and window.location is
 		used to redirect user from home page to profile.php page
 	*/
 	$("#login").on("submit",function(event){
@@ -176,10 +176,12 @@ $(document).ready(function(){
 			data	:$("#login").serialize(),
 			success	:function(data){
 				if(data == "login_success"){
+					$('#class-toggle').hide();
 					window.location.href = "index.php";
 				}else if(data == "cart_login"){
 					window.location.href = "cart.php";
 				}else{
+					$('#class-toggle').show();
 					$("#e_msg").html(data);
 					$(".overlay").hide();
 				}
@@ -203,12 +205,12 @@ $(document).ready(function(){
 				}else{
 					$("#signup_msg").html(data);
 				}
-				
+
 			}
 		})
 	})
-	
-	
+
+
     $("#offer_form").on("submit",function(event){
 		event.preventDefault();
 		$(".overlay").show();
@@ -219,19 +221,19 @@ $(document).ready(function(){
 			success : function(data){
 				$(".overlay").hide();
 				$("#offer_msg").html(data);
-				
+
 			}
 		})
 	})
-    
-    
-    
+
+
+
 	//Get User Information before checkout end here
 
 	//Add Product into Cart
 	$("body").delegate("#product","click",function(event){
 		var pid = $(this).attr("pid");
-		
+
 		event.preventDefault();
 		$(".overlay").show();
 		$.ajax({
@@ -271,7 +273,7 @@ $(document).ready(function(){
 			success : function(data){
 				$("#cart_product").html(data);
                 net_total();
-                
+
 			}
 		})
 	}
@@ -282,7 +284,7 @@ $(document).ready(function(){
 		Whenever user change qty we will immediate update their total amount by using keyup funtion
 		but whenever user put something(such as ?''"",.()''etc) other than number then we will make qty=1
 		if user put qty 0 or less than 0 then we will again make it 1 qty=1
-		('.total').each() this is loop funtion repeat for class .total and in every repetation we will perform sum operation of class .total value 
+		('.total').each() this is loop funtion repeat for class .total and in every repetation we will perform sum operation of class .total value
 		and then show the result into class .net_total
 	*/
 	$("body").delegate(".qty","keyup",function(event){
@@ -305,14 +307,14 @@ $(document).ready(function(){
 		$('.net_total').html("Total : $ " +net_total);
 
 	})
-	//Change Quantity end here 
+	//Change Quantity end here
 
 	/*
-		whenever user click on .remove class we will take product id of that row 
+		whenever user click on .remove class we will take product id of that row
 		and send it to action.php to perform product removal operation
 	*/
-    
-	   
+
+
     $("body").delegate(".remove","click",function(event){
         var remove = $(this).parent().parent().parent();
         var remove_id = remove.find(".remove").attr("remove_id");
@@ -326,10 +328,10 @@ $(document).ready(function(){
                 }
             })
     })
-    
-    
+
+
 	/*
-		whenever user click on .update class we will take product id of that row 
+		whenever user click on .update class we will take product id of that row
 		and send it to action.php to perform product qty updation operation
 	*/
 	$("body").delegate(".update","click",function(event){
@@ -354,7 +356,7 @@ $(document).ready(function(){
 		checkOutDetails() function work for two purposes
 		First it will enable php isset($_POST["Common"]) in action.php page and inside that
 		there is two isset funtion which is isset($_POST["getCartItem"]) and another one is isset($_POST["checkOutDetials"])
-		getCartItem is used to show the cart item into dropdown menu 
+		getCartItem is used to show the cart item into dropdown menu
 		checkOutDetails is used to show cart item into Cart.php page
 	*/
 	function checkOutDetails(){
