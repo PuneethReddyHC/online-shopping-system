@@ -131,7 +131,11 @@ session_start();
 						<li><?php
                              include "db.php";
                             if(isset($_SESSION["uid"])){
-                                $sql = "SELECT first_name FROM user_info WHERE user_id='$_SESSION[uid]'";
+								if($_SESSION['name'] == 'admin'){
+									$sql = "SELECT admin_name as first_name FROM admin_info WHERE admin_id='$_SESSION[uid]'";
+								}else{
+									$sql = "SELECT first_name FROM user_info WHERE user_id='$_SESSION[uid]'";
+								}
                                 $query = mysqli_query($con,$sql);
                                 $row=mysqli_fetch_array($query);
                                 
