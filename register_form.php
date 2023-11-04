@@ -48,7 +48,7 @@
                                     
                                     
                                     <div style="form-group">
-                                       <input class="primary-btn btn-block"  value="Sign Up" type="submit" name="signup_button">
+                                       <a class="primary-btn btn-block" href="index.php" value="Sign Up" type="submit" name="signup_button">submit</a>
                                     </div>
                                     <div class="text-pad">
                                     <a href="" data-toggle="modal" data-target="#Modal_login">Already have an Account ? then login</a>
