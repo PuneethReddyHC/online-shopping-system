@@ -168,7 +168,7 @@ demo = {
       title: "Hello World!"
     });
 
-    // To add the marker to the map, call setMap();
+    // To add the marker to the map, call setMap();--// Để thêm điểm đánh dấu vào bản đồ, hãy gọi setMap();
     marker.setMap(map);
   }
 

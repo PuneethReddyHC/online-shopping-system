@@ -47,9 +47,13 @@
                                     </div>
                                     
                                     
-                                    <div style="form-group">
+                                    <div class="form-group">
                                        <input class="primary-btn btn-block"  value="Sign Up" type="submit" name="signup_button">
                                     </div>
+                                    <div class="form-group"                                     >
+                                       <input class="primary-btn btn-block"  value="Sign Up" type="submit" name="signup_button">
+                                    </div>
+
                                     <div class="text-pad">
                                     <a href="" data-toggle="modal" data-target="#Modal_login">Already have an Account ? then login</a>
                                        
@@ -79,3 +83,5 @@
 				<!-- /row -->
 
 			
+
+                

@@ -6,7 +6,7 @@
             <script>
               document.write(new Date().getFullYear())
             </script>, made with <i class="material-icons">favorite</i>made by
-            <a href="" target="_blank">Jeyapratha Puspanathan</a>.
+            <a href="" target="_blank">PhamTuanAnh</a>.
           </div>
           <!-- your footer here -->
         </div>

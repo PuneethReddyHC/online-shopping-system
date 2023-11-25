@@ -1,25 +1,26 @@
 /*
 Template Name: Electro - HTML Ecommerce Template
-Author: yaminncco
+Tên mẫu: Mẫu thương mại điện tử Electro - HTML
+Author: PhamTuanAnh
 
-Colors:
+Colors: - Màu sắc 
 	Body 		: #333
 	Headers 	: #2B2D42
 	Primary 	: #D10024
 	Dark 		: #15161D ##1E1F29
 	Grey 		: #E4E7ED #FBFBFC #8D99AE #B9BABC
 
-Fonts: Montserrat
+Fonts: Montserrat - Phông chữ: Montserrat
 
-Table OF Contents
+Table OF Contents - Mục lục 
 ------------------------------------
-1 > GENERAL
------- Typography
+1 > GENERAL -  Tổng Quát
+------ Typography kiểu chữ
 ------ Buttons
 ------ Inputs
------- Sections
------- Breadcrumb
-2 > HEADER
+------ Sections 
+------ Breadcrumb 
+2 > HEADER -- Tiêu đề
 ------ Top header
 ------ Logo
 ------ Search
@@ -48,18 +49,17 @@ Table OF Contents
 ------------------------------------*/
 
 /*=========================================================
-	01 -> GENERAL
+	01 -> GENERAL -- Tổng quát
 ===========================================================*/
 
 /*----------------------------*\
-	Typography
+	Typography  -- Kiểu chữ
 \*----------------------------*/
 
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  background-image: linear-gradient(-134deg, #FFA62E 0%, #FB962E 20%, #F8852E 40%, #F3742D 60%, #EF612D 80%, #EA4D2C 100%);
-    
+  background-image: linear-gradient(-134deg, #FFA62E 0%, #FB962E 20%, #f8502e 40%, #ecf32d 60%, #64ef2d 80%, #3a9c22 100%);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -88,7 +88,7 @@ ul, ol {
 }
 
 /*----------------------------*\
-	Buttons
+	Buttons -- nút 
 \*----------------------------*/
 
 .primary-btn {
@@ -111,7 +111,7 @@ ul, ol {
 }
 
 /*----------------------------*\
-	Inputs
+	Inputs -- đầu vào
 \*----------------------------*/
 .wrap-login100 {
     width: 500px;
@@ -157,7 +157,7 @@ ul, ol {
     margin-bottom: 23px;
 }
 
-/*-- Text input --*/
+/*-- Text input -- đầu vào kiểu chữ*/ 
 
 
 .input {
@@ -173,7 +173,7 @@ textarea.input {
   min-height: 90px;
 }
 
-/*-- Number input --*/
+/*-- Number input -- đầu vào kiểu số*/
 
 .input-number {
   position: relative;
@@ -225,7 +225,7 @@ textarea.input {
   color: #D10024;
 }
 
-/*-- Select input --*/
+/*-- Select input -- chọn đầu vào*/
 
 .input-select {
   padding: 0px 15px;
@@ -234,7 +234,7 @@ textarea.input {
   height: 40px;
 }
 
-/*-- checkbox & radio input --*/
+/*-- checkbox & radio input -- hộp kiểm và đầu vào radio*/
 
 .input-radio, .input-checkbox {
   position: relative;
@@ -448,11 +448,11 @@ textarea.input {
 }
 
 /*=========================================================
-	02 -> HEADER
+	02 -> HEADER - Tiêu đề
 ===========================================================*/
 
 /*----------------------------*\
-	Top header
+	Top header -- đầu trang 
 \*----------------------------*/
 
 #top-header {
@@ -503,7 +503,7 @@ textarea.input {
 }
 
 /*----------------------------*\
-	Search
+	Search -- tìm kiếm
 \*----------------------------*/
 
 .header-search {
@@ -540,7 +540,7 @@ background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, 
 }
 
 /*----------------------------*\
-	Cart
+	Cart -- thanh toán 
 \*----------------------------*/
 
 .header-ctn {
@@ -666,7 +666,7 @@ background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, 
 }
 
 /*=========================================================
-	03 -> Navigation
+	03 -> Navigation -- đường dẫn
 ===========================================================*/
 
 #navigation {
@@ -676,7 +676,7 @@ background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, 
 }
 
 /*----------------------------*\
-	Main nav
+	Main nav -- đường dẫn chính
 \*----------------------------*/
 
 .main-nav>li+li {
@@ -688,7 +688,7 @@ background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, 
 }
 
 .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
-  color: #00B4DB;  /* fallback for old browsers */
+  color: #00B4DB;  /* fallback for old browsers -- dự phòng cho các trình duyệt cũ*/
 
 
   background-color: transparent;
@@ -715,7 +715,7 @@ background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, 
 }
 
 /*----------------------------*\
-	responsive nav
+	responsive nav-- điều hướng 
 \*----------------------------*/
 
 @media only screen and (max-width: 991px) {
@@ -763,7 +763,7 @@ background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, 
 }
 
 /*=========================================================
-	04 -> CATEGORY SHOP
+	04 -> CATEGORY SHOP -- thể loại cửa hàng 
 ===========================================================*/
 
 .shop {
@@ -852,7 +852,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
 }
 
 /*=========================================================
-	05 -> HOT DEAL
+	05 -> HOT DEAL -- các ưu đãi 
 ===========================================================*/
 
 #hot-deal.section {
@@ -915,11 +915,11 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
 }
 
 /*=========================================================
-	06 -> PRODUCT
+	06 -> PRODUCT -- sản phẩm
 ===========================================================*/
 
 /*----------------------------*\
-	product
+	product -- sản phẩm
 \*----------------------------*/
 
 .product {
@@ -1145,7 +1145,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
 }
 
 /*----------------------------*\
-	Widget product
+	Widget product -- Sản phẩm tiện ích
 \*----------------------------*/
 
 .product-widget {
@@ -1224,7 +1224,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
 }
 
 /*----------------------------*\
-	Products slick
+	Products slick-- Sản phẩm trơn
 \*----------------------------*/
 
 .products-slick .slick-list {
@@ -1275,11 +1275,11 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
 }
 
 /*=========================================================
-	07 -> PRODUCTS PAGE
+	07 -> PRODUCTS PAGE--TRANG SẢN PHẨM
 ===========================================================*/
 
 /*----------------------------*\
-	Aside
+	Aside--Qua một bên
 \*----------------------------*/
 
 .aside+.aside {
@@ -1292,7 +1292,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
   margin: 15px 0px 30px;
 }
 
-/*-- checkbox Filter --*/
+/*-- checkbox Filter --hộp kiểm Bộ lọc*/
 
 .checkbox-filter>div+div {
   margin-top: 10px;
@@ -1306,7 +1306,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
   color: #8D99AE;
 }
 
-/*-- Price Filter --*/
+/*-- Price Filter --Bộ lọc giá*/
 
 #price-slider {
   margin-bottom: 15px;
@@ -1350,7 +1350,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
 }
 
 /*----------------------------*\
-	Store
+	Store--cửa hàng 
 \*----------------------------*/
 
 .store-filter {
@@ -1358,7 +1358,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
   margin-top: 15px;
 }
 
-/*-- Store Sort --*/
+/*-- Store Sort --Sắp xếp cửa hàng*/
 
 .store-sort {
   display: inline-block;
@@ -1371,7 +1371,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
   margin-right: 15px;
 }
 
-/*-- Store Grid --*/
+/*-- Store Grid -- lưới của hàng */
 
 .store-grid {
   float: right;
@@ -1409,7 +1409,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
   display: block;
 }
 
-/*-- Store Pagination --*/
+/*-- Store Pagination --Phân trang cửa hàng*/
 
 .store-pagination {
   float: right;
@@ -1456,11 +1456,11 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
 }
 
 /*=========================================================
-	08 -> PRODUCT DETAILS PAGE
+	08 -> PRODUCT DETAILS PAGE--TRANG CHI TIẾT SẢN PHẨM
 ===========================================================*/
 
 /*----------------------------*\
-	Product view
+	Product view--Xem sản phẩm
 \*----------------------------*/
 
 #product-main-img .slick-prev {
@@ -1534,7 +1534,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
 }
 
 /*----------------------------*\
-	Product details
+	Product details--Thông tin chi tiết sản phẩm
 \*----------------------------*/
 
 .product-details .product-name {
@@ -1679,7 +1679,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
 }
 
 /*----------------------------*\
-	 Product tab
+	 Product tab-- bảng-Tab sản phẩm
 \*----------------------------*/
 
 #product-tab {
@@ -1738,7 +1738,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
   width: 100%;
 }
 
-/*-- Rating --*/
+/*-- Rating --Xếp hạng*/
 
 .rating-avg {
   font-size: 24px;
@@ -1791,7 +1791,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
   color: #8D99AE;
 }
 
-/*-- Reviews --*/
+/*-- Reviews --Đánh giá*/
 
 .reviews li {
   position: relative;
@@ -1866,7 +1866,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
   display: block;
 }
 
-/*-- Review Form --*/
+/*-- Review Form --Biểu mẫu đánh giá*/
 
 .review-form .input {
   margin-bottom: 15px;
@@ -1910,7 +1910,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
 }
 
 /*=========================================================
-	09 -> CHECKOUT PAGE
+	09 -> CHECKOUT PAGE--TRANG THANH TOÁN
 ===========================================================*/
 
 .billing-details {
@@ -1985,7 +1985,7 @@ background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10
 }
 
 /*=========================================================
-	10 -> NEWSLETTER
+	10 -> NEWSLETTER--BẢN TIN
 ===========================================================*/
 
 #newsletter.section {
@@ -2072,7 +2072,7 @@ background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, 
 }
 
 /*=========================================================
-	11 -> FOOTER
+	11 -> FOOTER --- CHÂN TRANG
 ===========================================================*/
 
 #footer {
@@ -2132,11 +2132,11 @@ background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, 
 }
 
 /*=========================================================
-	12 -> SLICK STYLE
+	12 -> SLICK STYLE -- PHONG CÁCH TRƯỢT
 ===========================================================*/
 
 /*----------------------------*\
-	Arrows
+	Arrows--Mũi tên
 \*----------------------------*/
 
 .slick-prev, .slick-next {
@@ -2181,7 +2181,7 @@ background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, 
 }
 
 /*----------------------------*\
-	Dots
+	Dots--Dấu chấm
 \*----------------------------*/
 
 .slick-dots li, .slick-dots li button, .slick-dots li button:before {
@@ -2206,7 +2206,7 @@ background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, 
 }
 
 /*=========================================================
-	13 -> RESPONSIVE
+	13 -> RESPONSIVE-PHẢN ỨNG NHANH NHẸN
 ===========================================================*/
 
 @media only screen and (max-width: 1201px) {}

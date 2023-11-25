@@ -11,7 +11,7 @@ session_start();
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Online Shopping</title>
+		<title>Ecommerce</title>
 
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -55,7 +55,7 @@ session_start();
   
             background: #780206;  /* fallback for old browsers */
             background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, blue, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   
         }
@@ -122,12 +122,13 @@ session_start();
 			<div id="top-header">
 				<div class="container">
 					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +91-9535688928</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> puneethreddy951@gmail.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i>Bangalore</a></li>
+						<li><a href="#"> About Us </a></li>
+						<li><a href="#"><i class="fa fa-phone"></i> 0967415314</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> PhamTuanAnh567780@gmail.com</a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i>VietNam</a></li>
 					</ul>
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-inr"></i> INR</a></li>
+						<li><a href="#"><i class="fa fa-inr"></i> VN</a></li>
 						<li><?php
                              include "db.php";
                             if(isset($_SESSION["uid"])){
@@ -170,7 +171,7 @@ session_start();
 			
 
 			<!-- MAIN HEADER -->
-			<div id="header">
+			 
 				<!-- container -->
 				<div class="container">
 					<!-- row -->
@@ -180,7 +181,7 @@ session_start();
 							<div class="header-logo">
 								<a href="#" class="logo">
 								<font style="font-style:normal; font-size: 33px;color: aliceblue;font-family: serif">
-                                        Online Shop
+                                        Ecommerce 
                                     </font>
 									
 								</a>
@@ -209,7 +210,7 @@ session_start();
 							<div class="header-ctn">
 								<!-- Wishlist -->
 								<div>
-									<a href="https://github.com/puneethreddyhc">
+									<a href="https://github.com/">
 										<i class="fa fa-github"></i>
 										<span>Github</span>
 										
@@ -232,7 +233,6 @@ session_start();
 										
 										<div class="cart-btns">
 												<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>  edit cart</a>
-											
 										</div>
 									</div>
 										
