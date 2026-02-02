@@ -1,316 +1,218 @@
 <?php
 session_start();
-
+require_once 'config.php';
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-		<title>Online Shopping</title>
-
-		<!-- Google font -->
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
-
-		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
-
-		<!-- Slick -->
-		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
-		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
-
-		<!-- nouislider -->
-		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
-
-		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-
-		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-		<link type="text/css" rel="stylesheet" href="css/accountbtn.css"/>
-		
-		
-		
-         
-		
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo SITE_NAME; ?> - Kosovo's Mobile Technology Leader</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="OneMobile Shop Kosovo - Premium smartphones, tablets, laptops and accessories with Kosovo warranty and support">
+    <meta name="keywords" content="mobile kosovo, smartphones pristina, tablets kosovo, laptops kosovo, mobile accessories">
+    <meta name="author" content="OneMobile Shop Kosovo">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="<?php echo SITE_NAME; ?>">
+    <meta property="og:description" content="Kosovo's leading mobile technology store">
+    <meta property="og:image" content="https://onemobile-ks.com/assets/logo-og.jpg">
+    <meta property="og:url" content="<?php echo SITE_URL; ?>">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- JavaScript -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    
     <style>
-        #navigation {
-          background: #FF4E50;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-          
+        :root {
+            --primary-color: #2A5CAA;
+            --primary-dark: #1E4788;
+            --primary-light: #4A7FC6;
+            --secondary-color: #FF6B35;
+            --dark-color: #1A1A2E;
+            --light-color: #F8F9FA;
+            --success-color: #28A745;
+            --warning-color: #FFC107;
+            --danger-color: #DC3545;
+            --border-radius: 8px;
+            --box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
         }
-        #header {
-  
-            background: #780206;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  
-        }
-        #top-header {
-              
-  
-            background: #870000;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #190A05, #870000);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #190A05, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-        }
-        #footer {
-            background: #7474BF;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-          color: #1E1F29;
-        }
-        #bottom-footer {
-            background: #7474BF;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-          
-
-        }
-        .footer-links li a {
-          color: #1E1F29;
-        }
-        .mainn-raised {
-            
-            margin: -7px 0px 0px;
-            border-radius: 6px;
-            box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-
-        }
-       
-        .glyphicon{
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    }
-    .glyphicon-chevron-left:before{
-        content:"\f053"
-    }
-    .glyphicon-chevron-right:before{
-        content:"\f054"
-    }
         
-
-       
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
         
-        </style>
-
-    </head>
-	<body>
-		<!-- HEADER -->
-		<header>
-			<!-- TOP HEADER -->
-			<div id="top-header">
-				<div class="container">
-					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +91-9535688928</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> puneethreddy951@gmail.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i>Bangalore</a></li>
-					</ul>
-					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-inr"></i> INR</a></li>
-						<li><?php
-                             include "db.php";
-                            if(isset($_SESSION["uid"])){
-                                $sql = "SELECT first_name FROM user_info WHERE user_id='$_SESSION[uid]'";
-                                $query = mysqli_query($con,$sql);
-                                $row=mysqli_fetch_array($query);
-                                
-                                echo '
-                               <div class="dropdownn">
-                                  <a href="#" class="dropdownn" data-toggle="modal" data-target="#myModal" ><i class="fa fa-user-o"></i> HI '.$row["first_name"].'</a>
-                                  <div class="dropdownn-content">
-                                    <a href="" data-toggle="modal" data-target="#profile"><i class="fa fa-user-circle" aria-hidden="true" ></i>My Profile</a>
-                                    <a href="logout.php"  ><i class="fa fa-sign-in" aria-hidden="true"></i>Log out</a>
-                                    
-                                  </div>
-                                </div>';
-
-                            }else{ 
-                                echo '
-                                <div class="dropdownn">
-                                  <a href="#" class="dropdownn" data-toggle="modal" data-target="#myModal" ><i class="fa fa-user-o"></i> My Account</a>
-								  <div class="dropdownn-content">
-								  	<a href="admin/login.php" ><i class="fa fa-user" aria-hidden="true" ></i>Admin</a>
-                                    <a href="" data-toggle="modal" data-target="#Modal_login"><i class="fa fa-sign-in" aria-hidden="true" ></i>Login</a>
-                                    <a href="" data-toggle="modal" data-target="#Modal_register"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a>
-                                    
-                                  </div>
-                                </div>';
-                                
-                            }
-                                             ?>
-                               
-                                </li>				
-					</ul>
-					
-				</div>
-			</div>
-			<!-- /TOP HEADER -->
-			
-			
-
-			<!-- MAIN HEADER -->
-			<div id="header">
-				<!-- container -->
-				<div class="container">
-					<!-- row -->
-					<div class="row">
-						<!-- LOGO -->
-						<div class="col-md-3">
-							<div class="header-logo">
-								<a href="#" class="logo">
-								<font style="font-style:normal; font-size: 33px;color: aliceblue;font-family: serif">
-                                        Online Shop
-                                    </font>
-									
-								</a>
-							</div>
-						</div>
-						<!-- /LOGO -->
-
-						<!-- SEARCH BAR -->
-						<div class="col-md-6">
-							<div class="header-search">
-								<form>
-									<select class="input-select">
-										<option value="0">All Categories</option>
-										<option value="1">Men</option>
-										<option value="1">Women </option>
-									</select>
-									<input class="input" id="search" type="text" placeholder="Search here">
-									<button type="submit" id="search_btn" class="search-btn">Search</button>
-								</form>
-							</div>
-						</div>
-						<!-- /SEARCH BAR -->
-
-						<!-- ACCOUNT -->
-						<div class="col-md-3 clearfix">
-							<div class="header-ctn">
-								<!-- Wishlist -->
-								<div>
-									<a href="https://github.com/puneethreddyhc">
-										<i class="fa fa-github"></i>
-										<span>Github</span>
-										
-									</a>
-								</div>
-								<!-- /Wishlist -->
-
-								<!-- Cart -->
-								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-										<i class="fa fa-shopping-cart"></i>
-										<span>Your Cart</span>
-										<div class="badge qty">0</div>
-									</a>
-									<div class="cart-dropdown"  >
-										<div class="cart-list" id="cart_product">
-										
-											
-										</div>
-										
-										<div class="cart-btns">
-												<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>  edit cart</a>
-											
-										</div>
-									</div>
-										
-									</div>
-								<!-- /Cart -->
-
-								<!-- Menu Toogle -->
-								<div class="menu-toggle">
-									<a href="#">
-										<i class="fa fa-bars"></i>
-										<span>Menu</span>
-									</a>
-								</div>
-								<!-- /Menu Toogle -->
-							</div>
-						</div>
-						<!-- /ACCOUNT -->
-					</div>
-					<!-- row -->
-				</div>
-				<!-- container -->
-			</div>
-			<!-- /MAIN HEADER -->
-		</header>
-		<!-- /HEADER -->
-		<nav id='navigation'>
-			<!-- container -->
-            <div class="container" id="get_category_home">
-                
+        .brand-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-bar-info">
+                        <span><i class="fas fa-phone-alt"></i> <?php echo SITE_PHONE; ?></span>
+                        <span><i class="fas fa-envelope"></i> <?php echo SITE_EMAIL; ?></span>
+                        <span><i class="fas fa-map-marker-alt"></i> <?php echo SITE_ADDRESS; ?></span>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="top-bar-links">
+                        <?php if(isset($_SESSION['user_id'])): ?>
+                            <a href="account.php"><i class="fas fa-user"></i> My Account</a>
+                            <a href="orders.php"><i class="fas fa-shopping-bag"></i> Orders</a>
+                            <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        <?php else: ?>
+                            <a href="login.php"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            <a href="register.php"><i class="fas fa-user-plus"></i> Register</a>
+                        <?php endif; ?>
+                        <a href="#" class="currency-selector"><?php echo SITE_CURRENCY; ?> EUR</a>
+                    </div>
+                </div>
             </div>
-				<!-- responsive-nav -->
-				
-			<!-- /container -->
-		</nav>
-            
-
-		<!-- NAVIGATION -->
-		
-		<div class="modal fade" id="Modal_login" role="dialog">
-                        <div class="modal-dialog">
-													
-                          <!-- Modal content-->
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              
-                            </div>
-                            <div class="modal-body">
-                            <?php
-                                include "login_form.php";
+        </div>
+    </div>
     
-                            ?>
-          
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="logo">
+                        <a href="index.php">
+                            <span class="brand-logo">OneMobile</span>
+                            <small class="logo-tagline">Kosovo's Tech Hub</small>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="col-lg-6 col-md-8 d-none d-md-block">
+                    <div class="search-box">
+                        <form action="search.php" method="GET" class="search-form">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="q" placeholder="Search for smartphones, tablets, accessories..." aria-label="Search">
+                                <select class="form-select" name="category">
+                                    <option value="">All Categories</option>
+                                    <option value="smartphones">Smartphones</option>
+                                    <option value="tablets">Tablets</option>
+                                    <option value="laptops">Laptops</option>
+                                    <option value="accessories">Accessories</option>
+                                </select>
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
                             </div>
-                            
-                          </div>
-													
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Cart & Actions -->
+                <div class="col-lg-3 col-md-12 col-6">
+                    <div class="header-actions">
+                        <div class="action-item wishlist">
+                            <a href="wishlist.php">
+                                <i class="fas fa-heart"></i>
+                                <span class="action-count">0</span>
+                            </a>
                         </div>
-                      </div>
-                <div class="modal fade" id="Modal_register" role="dialog">
-                        <div class="modal-dialog" style="">
-
-                          <!-- Modal content-->
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              
+                        <div class="action-item cart">
+                            <a href="cart.php" class="cart-toggle">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="action-count cart-count">0</span>
+                                <span class="cart-total">€0.00</span>
+                            </a>
+                            <!-- Mini Cart Dropdown -->
+                            <div class="mini-cart">
+                                <div class="mini-cart-header">
+                                    <h6>Shopping Cart</h6>
+                                </div>
+                                <div class="mini-cart-body">
+                                    <div class="empty-cart">
+                                        <p>Your cart is empty</p>
+                                    </div>
+                                </div>
+                                <div class="mini-cart-footer">
+                                    <a href="cart.php" class="btn btn-primary btn-sm">View Cart</a>
+                                    <a href="checkout.php" class="btn btn-secondary btn-sm">Checkout</a>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                            <?php
-                                include "register_form.php";
+                        </div>
+                        <div class="action-item mobile-menu-toggle">
+                            <button class="btn" id="mobileMenuToggle">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     
-                            ?>
-          
-                            </div>
-                            
-                          </div>
-
-                        </div>
-                      </div>
-		
+    <!-- Navigation -->
+    <nav class="main-navigation">
+        <div class="container">
+            <div class="nav-container">
+                <!-- Categories Menu -->
+                <ul class="main-menu">
+                    <li class="active"><a href="index.php"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="products.php?category=smartphones">Smartphones</a></li>
+                    <li><a href="products.php?category=tablets">Tablets</a></li>
+                    <li><a href="products.php?category=laptops">Laptops</a></li>
+                    <li><a href="products.php?category=accessories">Accessories</a></li>
+                    <li><a href="products.php?category=wearables">Wearables</a></li>
+                    <li><a href="brands.php">Brands</a></li>
+                    <li><a href="deals.php">Hot Deals</a></li>
+                    <li><a href="support.php">Support</a></li>
+                </ul>
+                
+                <!-- Promo Banner -->
+                <div class="nav-promo">
+                    <span>🔥 Free Delivery in Pristina | 2-Year Warranty</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-container">
+        <div class="mobile-menu-header">
+            <h5>Menu</h5>
+            <button class="btn-close-menu"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-menu-body">
+            <!-- Mobile menu content will be loaded via JS -->
+        </div>
+    </div>
+    
+    <!-- Main Content Area -->
+    <main class="main-content"></main>
