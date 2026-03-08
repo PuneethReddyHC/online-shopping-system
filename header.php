@@ -122,7 +122,7 @@ session_start();
 			<div id="top-header">
 				<div class="container">
 					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +91-9535688928</a></li>
+						<li><a href="#"><i class="fa fa-phone"></i> +91-9876543210</a></li>
 						<li><a href="#"><i class="fa fa-envelope-o"></i> puneethreddy951@gmail.com</a></li>
 						<li><a href="#"><i class="fa fa-map-marker"></i>Bangalore</a></li>
 					</ul>
@@ -313,4 +313,5 @@ session_start();
 
                         </div>
                       </div>
+
 		
