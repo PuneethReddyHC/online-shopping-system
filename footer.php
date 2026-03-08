@@ -11,7 +11,7 @@
 								<p>This is my Small Database Management System mini project</p>
 								<ul class="footer-links">
 									<li><a href="#"><i class="fa fa-map-marker"></i>Bangalore ,Kumbalagodu</a></li>
-									<li><a href="#"><i class="fa fa-phone"></i>+91-9535688928</a></li>
+									<li><a href="#"><i class="fa fa-phone"></i>+9865437210</a></li>
 									<li><a href="#"><i class="fa fa-envelope-o"></i>puneethreddy951@gmail.com</a></li>
 								</ul>
 							</div>
@@ -101,3 +101,4 @@
 		});
 	</script>
 	
+
